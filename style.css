@@ -6,6 +6,7 @@
 body {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -13,5 +14,10 @@ body {
 .container {
     width: 800px;
     display: flex;
-    background-color: blue;
+    flex-wrap: wrap;
+    border: 1px solid black;
+}
+
+button {
+    margin-bottom: 10px;
 }
