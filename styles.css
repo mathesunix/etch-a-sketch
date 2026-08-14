@@ -13,7 +13,8 @@ body {
 }
 
 .canvas {
-    border: 1px orange solid;
+    display: flex;
+    flex-wrap: wrap;
     width: 700px;
     height: 700px;
 }
