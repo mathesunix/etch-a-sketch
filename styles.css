@@ -6,10 +6,29 @@
 
 body {
     display: flex;
+    flex-direction: column;
+    gap: 20px;
     justify-content: center;
     align-items: center;
     width: 100vw;
     height: 100vh;
+}
+
+.changeResolution {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: white;
+    border: 3px solid orange;
+    width: 300px;
+    height: 40px;
+    border-radius: 50px;
+}
+
+.changeResolution:hover {
+    background-color: orange;
+    color: white;
+    border: none;
 }
 
 .canvas {

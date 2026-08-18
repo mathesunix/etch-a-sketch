@@ -7,6 +7,8 @@ let gridResolution = gridResolutionInput ** 2;
 
 let pixels = [];
 
+const changeResolution = document.querySelector(".changeResolution");
+
 function createPixels(gridResolution, pixelSize) {
     for (let i = 0; i < gridResolution; i++) {
         pixels[i] = document.createElement("div");
@@ -30,5 +32,5 @@ function appendPixels() {
 }
 
 createPixels(gridResolution, pixelSize);
-addHoverToPixels();
+colorPixels();
 appendPixels();
