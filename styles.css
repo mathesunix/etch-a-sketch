@@ -14,7 +14,7 @@ body {
     height: 100vh;
 }
 
-.changeResolution {
+.changeResolutionButton {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     font-weight: bold;
@@ -25,7 +25,7 @@ body {
     border-radius: 50px;
 }
 
-.changeResolution:hover {
+.changeResolutionButton:hover {
     background-color: orange;
     color: white;
     border: none;

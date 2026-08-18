@@ -7,7 +7,7 @@ let gridResolution = gridResolutionInput ** 2;
 
 let pixels = [];
 
-const changeResolution = document.querySelector(".changeResolution");
+const changeResolutionButton = document.querySelector(".changeResolutionButton");
 
 function createPixels(gridResolution, pixelSize) {
     for (let i = 0; i < gridResolution; i++) {
