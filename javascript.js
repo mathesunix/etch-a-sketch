@@ -15,7 +15,7 @@ function createPixels(gridResolution, pixelSize) {
     }
 }
 
-function addHoverToPixels() {
+function colorPixels() {
     for (let i = 0; i < pixels.length; i++) {
         pixels[i].addEventListener("mouseenter", () => {
             pixels[i].style.backgroundColor = "orange";
