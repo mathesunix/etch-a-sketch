@@ -15,6 +15,14 @@ function createPixels(gridResolution, pixelSize) {
     }
 }
 
+function addHoverToPixels() {
+    for (let i = 0; i < pixels.length; i++) {
+        pixels[i].addEventListener("mouseenter", () => {
+            pixels[i].style.backgroundColor = "orange";
+        });
+    }
+}
+
 function colorPixels() {
     for (let i = 0; i < pixels.length; i++) {
         pixels[i].style.backgroundColor = "lightblue";
@@ -29,5 +37,5 @@ function appendPixels() {
 }
 
 createPixels(gridResolution, pixelSize);
-colorPixels();
+addHoverToPixels();
 appendPixels();
