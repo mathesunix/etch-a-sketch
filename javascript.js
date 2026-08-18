@@ -23,13 +23,6 @@ function addHoverToPixels() {
     }
 }
 
-function colorPixels() {
-    for (let i = 0; i < pixels.length; i++) {
-        pixels[i].style.backgroundColor = "lightblue";
-        pixels[i].style.border = "1px solid black";
-    }
-}
-
 function appendPixels() {
     for (let i = 0; i < pixels.length; i++) {
         canvas.append(pixels[i]);
