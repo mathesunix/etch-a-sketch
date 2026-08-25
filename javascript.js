@@ -2,12 +2,14 @@ const canvas = document.querySelector(".canvas");
 
 const canvasSize = 700;
 let gridResolutionInput = 16;
-const pixelSize = canvasSize / gridResolutionInput;
+let pixelSize = canvasSize / gridResolutionInput;
 let gridResolution = gridResolutionInput ** 2;
 
 let pixels = [];
 
-const changeResolutionButton = document.querySelector(".changeResolutionButton");
+const changeResolutionButton = document.querySelector(
+    ".changeResolutionButton",
+);
 
 function createPixels(gridResolution, pixelSize) {
     for (let i = 0; i < gridResolution; i++) {
@@ -31,6 +33,32 @@ function appendPixels() {
     }
 }
 
-createPixels(gridResolution, pixelSize);
-colorPixels();
-appendPixels();
+function changeResolution() {
+    canvas.innerHTML = "";
+
+    pixels = [];
+
+    gridResolutionInput = prompt(
+        "Enter a number between 1 and 100 (inclusive)",
+    );
+
+    if (gridResolutionInput < 1) {
+        gridResolutionInput = 1;
+    } else if (gridResolutionInput > 100) {
+        gridResolutionInput = 100;
+    }
+
+    gridResolution = gridResolutionInput ** 2;
+    pixelSize = canvasSize / gridResolutionInput;
+
+    fillScreen();
+}
+
+function fillScreen() {
+    createPixels(gridResolution, pixelSize);
+    colorPixels();
+    appendPixels();
+}
+
+fillScreen();
+changeResolutionButton.addEventListener("click", changeResolution);
