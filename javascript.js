@@ -22,7 +22,12 @@ function createPixels(gridResolution, pixelSize) {
 function colorPixels() {
     for (let i = 0; i < pixels.length; i++) {
         pixels[i].addEventListener("mouseenter", () => {
-            pixels[i].style.backgroundColor = "orange";
+            const red = getRandomInt(0, 255);
+            const green = getRandomInt(0, 255);
+            const blue = getRandomInt(0, 255);
+
+            pixels[i].style.backgroundColor =
+                "rgb(" + red + " " + green + " " + blue + ")";
         });
     }
 }
@@ -54,6 +59,12 @@ function changeResolution() {
     fillScreen();
 }
 
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 function fillScreen() {
     createPixels(gridResolution, pixelSize);
     colorPixels();
@@ -62,3 +73,4 @@ function fillScreen() {
 
 fillScreen();
 changeResolutionButton.addEventListener("click", changeResolution);
+console.log(Math.random() * 100);
