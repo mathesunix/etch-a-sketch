@@ -1,3 +1,3 @@
 # etch-a-sketch
 
-This is a simple 16x16 grid in which you can paint each square individually.
+This is a simple Etch A Sketch like where you can paint individual pixels with randomised colors.
